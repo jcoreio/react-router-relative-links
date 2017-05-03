@@ -1,6 +1,6 @@
 {
-  "name": "react-router-relative-links",
-  "version": "0.1.0",
+  "name": "@jcoreio/react-router-relative-links",
+  "version": "1.0.1",
   "description": "Name says it all",
   "main": "lib/RelativeLinks.js",
   "repository": {
@@ -15,28 +15,31 @@
     "lint": "eslint modules",
     "start": "babel-node example/server.js",
     "test": "npm run lint && karma start",
-    "postinstall": "node ./npm-scripts/postinstall.js"
+    "prepublish": "npm run lint && karma start --single-run && npm run build && npm run build-umd && npm run build-min"
   },
   "authors": [
-    "Ryan Florence"
+    "Ryan Florence",
+    "Andy Edwards"
   ],
   "license": "MIT",
   "peerDependencies": {
     "react": "*",
-    "react-router": "^2.0.1",
-    "react-router-apply-middleware": "^0.0.2"
+    "react-router": "^2.0.1 || ^3.0.0",
+    "@jcoreio/react-router-apply-middleware": "^0.0.2 || ^1.0.0",
+    "react-router-route-props-context": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.6.5",
-    "babel-core": "^6.7.0",
-    "babel-eslint": "^3.1.23",
+    "@jcoreio/react-router-apply-middleware": "^1.0.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.6.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-1": "^6.5.0",
-    "eslint": "1.4.1",
-    "eslint-config-rackt": "1.0.0",
-    "eslint-plugin-react": "3.3.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-rackt": "^1.1.1",
+    "eslint-plugin-react": "^6.10.3",
     "expect": "^1.12.0",
     "express": "^4.13.3",
     "form-serialize": "^0.7.0",
@@ -52,13 +55,13 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.0.1",
     "pretty-bytes": "^2.0.1",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2",
-    "react-router": "^2.0.1",
-    "react-router-apply-middleware": "0.0.2",
-    "rimraf": "^2.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^3.0.5",
+    "react-router-route-props-context": "^1.0.1",
+    "rimraf": "^2.6.1",
     "webpack": "^1.12.6",
-    "webpack-dev-middleware": "^1.2.0"
+    "webpack-dev-middleware": "^1.10.2"
   },
   "tags": [
     "react",
