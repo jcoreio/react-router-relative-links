@@ -1,6 +1,6 @@
 {
   "name": "@jcoreio/react-router-relative-links",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Name says it all",
   "main": "lib/RelativeLinks.js",
   "repository": {
@@ -74,6 +74,7 @@
     "relative links"
   ],
   "dependencies": {
+    "prop-types": "^15.5.10",
     "resolve-pathname": "^2.0.0"
   }
 }

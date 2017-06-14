@@ -46,25 +46,22 @@ const resolvePathname = ({ relativePath, route, routes, params }) => {
   return formatPattern(withoutSlash, params)
 }
 
-export const RelativeLink = React.createClass({
-
-  propTypes: {
+export class RelativeLink extends React.Component {
+  static propTypes = {
     to: oneOfType([ string, object ]).isRequired
-  },
+  }
 
-  contextTypes: {
+  static contextTypes = {
     routeProps: object.isRequired
-  },
+  }
 
-  getInitialState() {
-    return { to: this.calculateTo(this.props) }
-  },
+  state = { to: this.calculateTo(this.props) }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.to !== this.props.to) {
       this.setState({ to: this.calculateTo(nextProps) })
     }
-  },
+  }
 
   calculateTo(props) {
     const { to } = props
@@ -74,11 +71,10 @@ export const RelativeLink = React.createClass({
     const resolved = isAbsolute(relativePath) ? relativePath :
       resolvePathname({ relativePath, route, routes, params })
     return isLocationDescriptor ? { ...to, pathname: resolved } : resolved
-  },
+  }
 
   render() {
     return <Link {...this.props} to={this.state.to} />
   }
-
-})
+}
 
