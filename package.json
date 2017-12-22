@@ -1,6 +1,6 @@
 {
   "name": "@jcoreio/react-router-relative-links",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Name says it all",
   "main": "lib/RelativeLinks.js",
   "repository": {
