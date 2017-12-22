@@ -1,5 +1,5 @@
 /*eslint-env mocha*/
-import React from 'react'
+import * as React from 'react'
 import expect from 'expect'
 import { Router, Route } from 'react-router'
 import routePropsContext from 'react-router-route-props-context'
@@ -15,14 +15,14 @@ describe('RelativeLink', () => {
     const run = (link, initialPath, assertion) => {
       const linkWithId = React.cloneElement(link, { className: '__subject__' })
 
-      const Container = React.createClass({
+      class Container extends React.Component {
         componentDidMount() {
           assertion(div.querySelector('a.__subject__'))
-        },
+        }
         render() {
           return this.props.children
         }
-      })
+      }
 
       const Parent = ({ children }) => <div>Parent {children}</div>
       const Reference = ({ children }) => <div>Reference {linkWithId} {children}</div>
@@ -127,14 +127,14 @@ describe('RelativeLink', () => {
     const run = (link, initialPath, assertion) => {
       const linkWithId = React.cloneElement(link, { className: '__subject__' })
 
-      const Container = React.createClass({
+      class Container extends React.Component {
         componentDidMount() {
           assertion(div.querySelector('a.__subject__'))
-        },
+        }
         render() {
           return this.props.children
         }
-      })
+      }
 
       const Parent = ({ children }) => <div>Parent {children}</div>
       const Reference = ({ children }) => <div>Reference {linkWithId} {children}</div>

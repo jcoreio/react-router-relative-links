@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'react-router/lib/Link'
+import * as React from 'react'
+import { Link } from 'react-router'
 import { formatPattern } from 'react-router/lib/PatternUtils'
 import resolve from 'resolve-pathname'
 import { oneOfType, object, string } from 'prop-types'
