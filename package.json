@@ -24,13 +24,13 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "react": "^15 || ^12",
+    "@jcoreio/react-router-apply-middleware": "^2.0.0",
+    "react": "^15 || ^16",
     "react-router": "^3.0.0",
-    "@jcoreio/react-router-apply-middleware": "^1.0.0",
     "react-router-route-props-context": "^1.0.0"
   },
   "devDependencies": {
-    "@jcoreio/react-router-apply-middleware": "^1.0.1",
+    "@jcoreio/react-router-apply-middleware": "^2.0.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^6.1.2",
